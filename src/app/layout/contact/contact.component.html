@@ -1,0 +1,49 @@
+<div class="contact-page">
+    <h1>Contact</h1>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" id="contact" class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <label>
+                    Name:*
+                    <input id="name" type="text" formControlName="name" required />
+                </label>
+                <p *ngIf="contactForm.get('name').hasError('required') && isSubmitted" class='error'>*This field is required</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <label>
+                    Email:*
+                    <input type="email" formControlName="email" required />
+                </label>
+                <p *ngIf="contactForm.get('email').hasError('required') && isSubmitted" class='error'>*This field is required</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <label>
+                    Message:*
+                    <input type="text" formControlName="message" required />
+                </label>
+                <p *ngIf="contactForm.get('message').hasError('required') && isSubmitted" class='error'>*This field is required</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <label>
+                    Sign up for our newletter?
+                    <input type="checkbox" formControlName="shouldAddToNewsletter" />
+                </label>
+            </div>
+        </div>
+        <div class="row"><div class="col-sm-6"> <button type="submit">Submit</button> </div></div>
+    </form>
+    
+    <div class="row success-msg" *ngIf="showMsg">
+        <div class="col-sm-12">
+            <p class="alert alert-success">
+                <strong>Thank you! We'll be in touch soon.</strong>
+            </p>
+        </div>
+    </div>
+</div>

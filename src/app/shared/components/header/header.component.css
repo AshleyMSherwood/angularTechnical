@@ -1,5 +1,5 @@
 .header {
-  background-color: black;
+  background-color: #3f51b5;
   color: #FFF;
   padding: 20px;
 }
@@ -19,4 +19,12 @@
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.menu a {
+  color: #fff;
+}
+
+.menu a:hover {
+  color:#fff;
 }

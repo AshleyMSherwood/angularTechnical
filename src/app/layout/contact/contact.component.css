@@ -1,0 +1,25 @@
+.contact-page {
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#contact {
+    width: fit-content;
+}
+input[type="text"], input[type="email"], label {
+    width: 100%;
+}
+.error {
+    font-size: .8rem;
+    color: red;
+    margin-bottom: 0;
+}
+input.ng-touched.ng-invalid {
+    border: 2px solid red;
+}
+
+.success-msg {
+    margin-top: 20px;
+}
